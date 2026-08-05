@@ -28,6 +28,12 @@
                         <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="Masukkan nama lengkap" required>
                     </div>
 
+                    <!-- Input Nomor HP Ditambahkan di Sini -->
+                    <div class="mb-3">
+                        <label for="phone" class="form-label small fw-semibold">Nomor HP</label>
+                        <input type="tel" class="form-control form-control-sm" id="phone" name="phone" placeholder="Masukkan nomor HP/WhatsApp" required>
+                    </div>
+
                     <div class="mb-3">
                         <label for="address" class="form-label small fw-semibold">Alamat Lengkap Pengiriman</label>
                         <textarea class="form-control form-control-sm" id="address" name="address" rows="3" placeholder="Jalan, No. Rumah, Patokan..." required></textarea>

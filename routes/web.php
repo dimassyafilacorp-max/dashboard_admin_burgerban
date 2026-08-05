@@ -20,3 +20,12 @@ Route::view('/kemitraan', 'kemitraan')->name('kemitraan');
 
 // Route Halaman Big Order
 Route::view('/big-order', 'big-order')->name('big-order');
+
+// Rute untuk pembeli
+Route::post('/order/store', [OrderController::class, 'store'])->name('order.store');
+
+// Rute untuk Dashboard Admin Rekap Pesanan
+Route::get('/admin/dashboard', [OrderController::class, 'adminDashboard'])->name('admin.dashboard');
+
+// Rute hapus pesanan admin
+Route::delete('/admin/order/{id}', [OrderController::class, 'destroy'])->name('admin.order.destroy');
