@@ -28,7 +28,7 @@
                         <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="Masukkan nama lengkap" required>
                     </div>
 
-                    <!-- Input Nomor HP Ditambahkan di Sini -->
+                    <!-- Input Nomor HP -->
                     <div class="mb-3">
                         <label for="phone" class="form-label small fw-semibold">Nomor HP</label>
                         <input type="tel" class="form-control form-control-sm" id="phone" name="phone" placeholder="Masukkan nomor HP/WhatsApp" required>
@@ -43,16 +43,22 @@
                         <label class="form-label small fw-semibold">Metode Pembayaran</label>
                         <select class="form-select form-select-sm" name="payment_method" id="payment_method" required>
                             <option value="">-- Pilih Pembayaran --</option>
+                            <option value="Transfer BRI">Transfer Bank BRI</option>
                             <option value="COD">COD (Bayar di Tempat)</option>
-                            <option value="QRIS">QRIS (Scan & Bayar)</option>
                         </select>
                     </div>
 
-                    <!-- Simulasi Tampilan QRIS -->
-                    <div id="qris-container" class="text-center mb-3 d-none p-3 bg-light rounded border">
-                        <p class="small text-muted fw-bold mb-2">Scan QRIS:</p>
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=SimulasiQRISBurgerban" alt="QRIS Code" class="img-thumbnail mb-2">
-                        <p class="text-danger small mb-0 fw-semibold">Bebas Biaya Admin</p>
+                    <!-- Informasi Rekening Bank BRI -->
+                    <div id="bri-container" class="text-center mb-3 d-none p-3 bg-white rounded border shadow-sm">
+                        <p class="text-muted small mb-1">Silakan Transfer Pembayaran Ke:</p>
+                        <h6 class="fw-bold text-primary mb-1">Bank BRI</h6>
+                        <h5 class="fw-bold text-dark mb-1" style="letter-spacing: 1px;">329701005493507</h5>
+                        <p class="fw-semibold text-secondary small mb-2">a.n Syita Syafila Fitri</p>
+                        
+                        <!-- Tombol Konfirmasi via WhatsApp Langsung ke Nomor Tujuan -->
+                        <a href="https://wa.me/6282334642599?text=Halo%2C%20saya%20ingin%20konfirmasi%20pembayaran%20untuk%20pesanan%20di%20Burgerban." target="_blank" class="btn btn-success btn-sm text-white px-3 py-1 fw-bold text-decoration-none" style="font-size: 12px; background-color: #25d366; border: none;">
+                            <i class="fab fa-whatsapp me-1"></i> Konfirmasi via WhatsApp
+                        </a>
                     </div>
 
                     <div class="border-top pt-3 mb-3">
@@ -117,13 +123,13 @@
 
 <script>
     const paymentMethod = document.getElementById('payment_method');
-    const qrisContainer = document.getElementById('qris-container');
+    const briContainer = document.getElementById('bri-container');
 
     paymentMethod.addEventListener('change', function() {
-        if(this.value === 'QRIS') {
-            qrisContainer.classList.remove('d-none');
+        if(this.value === 'Transfer BRI') {
+            briContainer.classList.remove('d-none');
         } else {
-            qrisContainer.classList.add('d-none');
+            briContainer.classList.add('d-none');
         }
     });
 </script>

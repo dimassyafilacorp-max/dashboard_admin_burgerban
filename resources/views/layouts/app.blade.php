@@ -62,7 +62,7 @@
                 <div class="col-lg-2 col-md-4 col-6">
                     <h6 class="fw-bold text-white mb-3 mt-lg-5">Kemitraan</h6>
                     <ul class="list-unstyled text-secondary small">
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Kemitraan</a></li>
+                        <li class="mb-2"><a href="{{ route('kemitraan') }}" class="text-decoration-none text-secondary">Kemitraan</a></li>
                     </ul>
                 </div>
 
@@ -82,13 +82,22 @@
                     </div>
                     <div class="mb-3">
                         <p class="text-secondary small mb-1">Email</p>
-                        <p class="text-white small fw-semibold mb-0">contactburgerban@gmail.com</p>
+                        <!-- Email langsung memicu aplikasi/browser kirim email (mailto) -->
+                        <a href="mailto:contactburgerban@gmail.com" class="text-white small fw-semibold text-decoration-none d-block">
+                            contactburgerban@gmail.com
+                        </a>
                     </div>
                     <div>
                         <p class="text-secondary small mb-2">Social Media</p>
                         <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-dark btn-sm rounded-circle border border-secondary text-light d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="btn btn-dark btn-sm rounded-circle border border-secondary text-light d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;"><i class="fab fa-tiktok"></i></a>
+                            <!-- Link Instagram -->
+                            <a href="https://www.instagram.com/burgerbanbwi?igsh=bGdhOXBiY2U3dDl1" target="_blank" class="btn btn-dark btn-sm rounded-circle border border-secondary text-light d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <!-- Link TikTok -->
+                            <a href="https://www.tiktok.com/@burgerban?_r=1&_t=ZS-98dIBwJ68Un" target="_blank" class="btn btn-dark btn-sm rounded-circle border border-secondary text-light d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +109,8 @@
             <!-- Copyright & Kontak Kami -->
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <p class="text-secondary small mb-3 mb-md-0">&copy; 2026 PT. Berlian Anugerah Numusi.</p>
-                <a href="#" class="btn rounded-pill px-4 fw-bold" style="background-color: #a3e635; color: #000; border: none;">Kontak Kami</a>
+                <!-- Tombol Kontak Kami mengarah ke WhatsApp Admin -->
+                <a href="https://wa.me/6282334642599" target="_blank" class="btn rounded-pill px-4 fw-bold" style="background-color: #a3e635; color: #000; border: none;">Kontak Kami</a>
             </div>
         </div>
     </footer>
