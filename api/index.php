@@ -1,4 +1,9 @@
-<?php
+make(Illuminate\Contracts\Http\Kernel::class);
 
-// Forward request ke file entry point bawaan Laravel
-require __DIR__ . '/../public/index.php';
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+
+$response->send();
+
+$kernel->terminate($request, $response);
